@@ -3,7 +3,7 @@
 # build assets would be saved at /usr/app/build
 FROM node:alpine
 WORKDIR '/usr/app'
-COPY package.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build 
